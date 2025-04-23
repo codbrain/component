@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+* {
+   font-family: "Montserrat", sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-transform: capitalize;
+}
+
+body {
+   background: linear-gradient(45deg, slategray, honeydew);
+}
+
+.box-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column;
+   padding: 20px;
+   min-height: 100vh;
+}
+
+.box-container .box {
+   max-width: 700px;
+   background-color: #fff;
+   border: 2px solid darkslategray;
+   box-shadow: 0 5px rgba(0, 0, 0, .2);
+   border-radius: 5px;
+   overflow: hidden;
+}
+
+.box-container .box .heading {
+   display: flex;
+   align-items: center;
+   ;
+   justify-content: space-between;
+   gap: 10px;
+   padding: 10px;
+   cursor: pointer;
+}
+
+.box-container .box.active .heading {
+   background-color: darkslategray;
+   color: #fff;
+}
+
+.box-container .box .heading i {
+   transition: .5 cubic-bezier(.05, .89, .26, 1.31);
+}
+
+.box-container .box.active .heading i {
+   transform: rotate(180deg);
+}
+
+.box-container .box .content {
+   line-height: 1.8;
+   height: 0;
+   transform-origin: top;
+   transform: scaleY(0);
+}
+
+.box-container .box.active .content {
+   padding: 10px;
+   height: auto;
+   transform: scaleY(1);
+   transition: .5s cubic-bezier(.05, .89, .26, 1.31);
+}
