@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.container>h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+
+img {
+    max-width: 80%;
+    height: 100%;
+    display: block;
+    margin: 50px auto;
+    animation: kkk;
+    animation-timeline: view();
+    animation-range: entry 0% entry 150%;
+    border-radius: 30px;
+}
+
+@keyframes kkk {
+    0% {
+        opacity: 0;
+        filter: brightness(2);
+        scale: .3;
+    }
+}
